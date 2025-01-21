@@ -624,6 +624,7 @@ if gtest_src_dir:
 
     # Test-specific version of cflags, must include the GoogleTest
     # include directory.
+    test_cflags = cflags.copy()
     test_cflags.append('-I' + os.path.join(gtest_src_dir, 'googletest', 'include'))
 
     test_variables = [('cflags', test_cflags)]
