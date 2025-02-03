@@ -22,7 +22,7 @@ jobs:
         MACOSX_DEPLOYMENT_TARGET: 10.15
       run: |
         cmake -Bbuild -GXcode \
-          -DCMAKE_OSX_ARCHITECTURES=arm64;x86_64 \
+          '-DCMAKE_OSX_ARCHITECTURES=arm64;x86_64' \
           -DCMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LANGUAGE_STANDARD="c++14" \
           -DCMAKE_XCODE_ATTRIBUTE_CLANG_CXX_LIBRARY="libc++"
         cmake --build build --config Release
